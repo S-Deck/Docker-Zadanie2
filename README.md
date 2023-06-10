@@ -4,6 +4,10 @@
 ```
 docker compose up -d
 ```
+![image](/ss/compose.PNG)
+
+* Aplikacja react
+![image](/ss/react.PNG)
 
 * Test CVE
 
@@ -16,3 +20,8 @@ docker compose up -d
 * Łańcuchy Github Action wykonają się poprawnie jeśli między ich uruchomieniami nastąpiły zmiany w gałęzi main.
   Przykład uruchomienia Action bez wprowadzenia zmian w main:
   ![image](/ss/Action_failed.PNG)
+  
+* Prawidłowe działanie
+![image](/ss/Success.PNG)
+* Packages
+![image](/ss/wersje.PNG)
