@@ -50,8 +50,8 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/dockerzad2:${{ steps.versioning.outputs.version }}
-          cache-from: type=registry,ref=${{ github.repository_owner }}/dockerzad2:${{ steps.versioning.outputs.version  }}
+            ghcr.io/${{ github.repository_owner }}/zadanie2:${{ steps.versioning.outputs.version }}
+          cache-from: type=registry,ref=${{ github.repository_owner }}/zadanie2:${{ steps.versioning.outputs.version  }}
           cache-to: type=inline
     
       - name: Create Release
@@ -68,7 +68,7 @@ jobs:
         uses: snyk/actions/docker@master
         continue-on-error: true
         with:
-          image: ghcr.io/${{ github.repository_owner }}/dockerzad2:${{ steps.versioning.outputs.version }}
+          image: ghcr.io/${{ github.repository_owner }}/zadanie2:${{ steps.versioning.outputs.version }}
           args: --file=Dockerfile --severity-threshold=critical --sarif-file-output=snyk.sarif
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
